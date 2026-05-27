@@ -1,0 +1,273 @@
+/* ============================================================
+   Isaac Roth Solar — Foundational tokens
+   Colors, type, spacing, radii, shadows.
+   Import this once at the top of any HTML page.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;500;600;700&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,500;1,700&display=swap');
+
+:root {
+  /* ---------- BRAND COLORS ---------- */
+  /* Primary — Moss / Forest Green. Earthy, grounded, the brand color per Isaac. */
+  --moss-50:  #EFF3EC;
+  --moss-100: #DCE5D5;
+  --moss-200: #B6C8AC;
+  --moss-300: #87A579;
+  --moss-400: #5A8049;
+  --moss-500: #3E6233;     /* primary brand */
+  --moss-600: #2C4824;
+  --moss-700: #1F3319;     /* dark green for headers, dark surfaces */
+  --moss-900: #0F1F0C;
+
+  /* Primary — Sun Gold. The headline color. Warm, optimistic.   */
+  --sun-50:  #FFF8E6;
+  --sun-100: #FFEFC2;
+  --sun-200: #FFE08A;
+  --sun-300: #FFCE52;
+  --sun-400: #FFB927;      /* primary brand */
+  --sun-500: #F2A310;
+  --sun-600: #C97F05;
+  --sun-700: #8F5803;
+
+  /* Secondary — Sky Blue. Clear-day, clean-energy.              */
+  --sky-50:  #EBF6FF;
+  --sky-100: #CFE7FF;
+  --sky-200: #9CCEFE;
+  --sky-300: #5CB0F8;
+  --sky-400: #2F94E8;      /* secondary brand */
+  --sky-500: #1A78C8;
+  --sky-600: #0F5C9F;
+
+  /* Accent — Leaf Green. Growth, sustainability.                */
+  --leaf-50:  #ECF8EE;
+  --leaf-100: #CCEDD2;
+  --leaf-200: #9FD9A9;
+  --leaf-300: #6CC07C;
+  --leaf-400: #3DA053;     /* accent */
+  --leaf-500: #267F3C;
+
+  /* Warm — Terracotta. Fall foliage, used SPARINGLY for warmth. */
+  --clay-200: #F4C4A4;
+  --clay-400: #D77548;
+  --clay-500: #B65A30;
+
+  /* ---------- NEUTRALS — slightly warm ---------- */
+  --cream-50:  #FBF7F0;    /* page background */
+  --cream-100: #F5EFE3;    /* surface alt */
+  --cream-200: #EAE2D2;    /* card border, divider */
+  --cream-300: #D6CBB6;
+  --stone-400: #9C9079;
+  --stone-500: #6F665A;
+  --stone-600: #4B4339;    /* secondary text */
+  --stone-700: #2F2A22;    /* primary text — warm near-black */
+  --stone-900: #1A1612;
+
+  /* Pure ink for high contrast / dark surfaces */
+  --ink:    #161310;
+  --white:  #FFFFFF;
+
+  /* ---------- SEMANTIC SLOTS ---------- */
+  --bg:           var(--white);
+  --bg-alt:       var(--cream-100);
+  --surface:      var(--white);
+  --surface-alt:  var(--cream-50);
+  --surface-dark: var(--stone-700);
+
+  --fg:           var(--stone-700);
+  --fg-strong:    var(--stone-900);
+  --fg-muted:     var(--stone-500);
+  --fg-subtle:    var(--stone-400);
+  --fg-inverse:   var(--white);
+
+  --border:        var(--cream-200);
+  --border-strong: var(--cream-300);
+
+  --accent:        var(--moss-500);
+  --accent-hover:  var(--moss-600);
+  --accent-fg:     var(--cream-50);
+
+  --accent-warm:        var(--sun-400);   /* secondary gold accent */
+  --accent-warm-hover:  var(--sun-500);
+
+  --link:          var(--sky-500);
+  --link-hover:    var(--sky-600);
+
+  --success:       var(--leaf-400);
+  --info:          var(--sky-400);
+  --warn:          var(--sun-500);
+  --danger:        var(--clay-500);
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Antonio', 'Archivo', 'Inter Tight', sans-serif;  /* bold compressed industrial — hero, h1, h2 */
+  --font-sans:    'Inter Tight', 'Archivo', system-ui, sans-serif;   /* clean workhorse sans — body, UI */
+  --font-heavy:   'Archivo', 'Inter Tight', system-ui, sans-serif;   /* chunky alt for callouts — weight 800/900 */
+  --font-mono:    ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* ---------- TYPE SCALE (clamp-based, fluid) ---------- */
+  --fs-display-2xl: clamp(3.25rem, 6vw, 5.5rem);   /* hero    */
+  --fs-display-xl:  clamp(2.5rem, 4.5vw, 4rem);    /* h1      */
+  --fs-display-lg:  clamp(2rem, 3.4vw, 3rem);      /* h2      */
+  --fs-h3:          1.75rem;
+  --fs-h4:          1.375rem;
+  --fs-lg:          1.125rem;
+  --fs-base:        1rem;
+  --fs-sm:          0.875rem;
+  --fs-xs:          0.75rem;
+
+  --lh-display: 1.04;
+  --lh-tight:   1.15;
+  --lh-snug:    1.35;
+  --lh-normal:  1.55;
+
+  --tracking-tight:  -0.025em;
+  --tracking-normal: -0.005em;
+  --tracking-wide:    0.02em;
+  --tracking-eyebrow: 0.14em;
+  --tracking-rule:   0.22em;  /* tiny numbered-section labels, Formacha-style */
+
+  /* ---------- SPACING (4px base) ---------- */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-8:  32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+  --s-32: 128px;
+
+  /* ---------- RADII — slightly rounded throughout ---------- */
+  --r-xs:   6px;     /* inputs, small chips */
+  --r-sm:   10px;    /* buttons, tags */
+  --r-md:   14px;    /* small cards */
+  --r-lg:   20px;    /* cards, panels */
+  --r-xl:   28px;    /* hero panels, feature blocks */
+  --r-2xl:  40px;    /* big rounded sections */
+  --r-pill: 999px;   /* pills */
+
+  /* ---------- SHADOWS — warm, with golden halo (the brand glow) ---------- */
+  --shadow-xs: 0 1px 2px rgba(143, 88, 3, 0.08), 0 0 14px rgba(255, 185, 39, 0.10);
+  --shadow-sm: 0 4px 10px -2px rgba(143, 88, 3, 0.18), 0 0 22px rgba(255, 185, 39, 0.18);
+  --shadow-md: 0 10px 24px -8px rgba(143, 88, 3, 0.28), 0 0 32px rgba(255, 185, 39, 0.26);
+  --shadow-lg: 0 24px 44px -12px rgba(143, 88, 3, 0.36), 0 0 48px rgba(255, 185, 39, 0.34);
+  --shadow-glow: 0 0 0 5px rgba(62, 98, 51, 0.28), 0 0 26px rgba(62, 98, 51, 0.18);  /* moss focus */
+  --shadow-sun:  0 8px 20px -4px rgba(143, 88, 3, 0.40), 0 0 36px rgba(255, 185, 39, 0.55);  /* CTA glow */
+
+  /* ---------- MOTION ---------- */
+  --ease-out:    cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:    120ms;
+  --dur-base:    200ms;
+  --dur-slow:    360ms;
+
+  /* ---------- LAYOUT ---------- */
+  --container: 1180px;
+  --container-narrow: 760px;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT DEFAULTS — use these as starting styles
+   ============================================================ */
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--fg);
+  background: var(--bg);
+  letter-spacing: var(--tracking-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  color: var(--fg-strong);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-display-xl); line-height: var(--lh-display); text-transform: uppercase; letter-spacing: -0.01em; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-display-lg); line-height: var(--lh-tight); text-transform: uppercase; letter-spacing: -0.005em; }
+
+/* Italic emphasis inside display headings — the kicker accent on key words. */
+h1 em, h2 em, .display em {
+  font-family: 'Archivo', 'Inter Tight', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  color: var(--clay-500);
+  text-transform: none;
+  letter-spacing: -0.015em;
+}
+h3 { font-weight: 600; font-size: var(--fs-h3); line-height: var(--lh-tight); }
+h4 { font-weight: 600; font-size: var(--fs-h4); line-height: var(--lh-tight); }
+
+p { margin: 0; text-wrap: pretty; }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: 2px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+small { font-size: var(--fs-sm); color: var(--fg-muted); }
+
+code, pre, kbd { font-family: var(--font-mono); font-size: 0.9em; }
+
+::selection { background: var(--moss-200); color: var(--moss-900); }
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-glow);
+  border-radius: var(--r-xs);
+}
+
+/* Eyebrow / kicker — used above headings, ALL CAPS, tracked out */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--clay-500);
+}
+
+/* Numbered section rule — the Formacha signature. */
+.section-rule {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 22px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--cream-200);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-rule);
+  text-transform: uppercase;
+  color: var(--stone-500);
+}
+.section-rule .num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--clay-500);
+  text-transform: none;
+}
+
+/* Lead paragraph — sits under h1/h2 */
+.lead {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-snug);
+  color: var(--fg);
+  max-width: 60ch;
+}
