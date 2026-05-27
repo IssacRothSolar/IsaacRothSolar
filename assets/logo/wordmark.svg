@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" fill="none">
+  <defs>
+    <radialGradient id="sphereCore3" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#FFF8E0"></stop>
+      <stop offset="18%" stop-color="#FFE066"></stop>
+      <stop offset="48%" stop-color="#FFB927"></stop>
+      <stop offset="78%" stop-color="#D17C04"></stop>
+      <stop offset="100%" stop-color="#7A4500"></stop>
+    </radialGradient>
+    <radialGradient id="sphereShade3" cx="65%" cy="72%" r="55%">
+      <stop offset="0%" stop-color="#7A4500" stop-opacity="0.55"></stop>
+      <stop offset="100%" stop-color="#7A4500" stop-opacity="0"></stop>
+    </radialGradient>
+    <radialGradient id="sphereSpec3" cx="36%" cy="28%" r="22%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"></stop>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.18"></stop>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"></stop>
+    </radialGradient>
+    <linearGradient id="rayBody3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE066"></stop>
+      <stop offset="55%" stop-color="#FFB927"></stop>
+      <stop offset="100%" stop-color="#A85F02"></stop>
+    </linearGradient>
+    <linearGradient id="rayHilite3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"></stop>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.25"></stop>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="rayShade3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7A4500" stop-opacity="0"></stop>
+      <stop offset="55%" stop-color="#7A4500" stop-opacity="0.30"></stop>
+      <stop offset="100%" stop-color="#7A4500" stop-opacity="0.85"></stop>
+    </linearGradient>
+    <radialGradient id="floor3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1F3319" stop-opacity="0.4"></stop>
+      <stop offset="100%" stop-color="#1F3319" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+
+  <g transform="translate(60 60) scale(0.55)">
+    <ellipse cx="0" cy="78" rx="58" ry="9" fill="url(#floor3)"></ellipse>
+    <g>
+      <g id="rayB3">
+        <path d="M -10 -50 Q 0 -78 10 -50 L 6 -38 L -6 -38 Z" fill="#5A2E00"></path>
+        <path d="M -8.5 -49 Q 0 -74 8.5 -49 L 5.5 -39 L -5.5 -39 Z" fill="url(#rayBody3)"></path>
+        <path d="M -8.5 -49 Q -4 -68 0 -74 L 0 -42 L -5.5 -39 Z" fill="url(#rayHilite3)" opacity="0.85"></path>
+        <path d="M 8.5 -49 Q 4 -68 0 -74 L 0 -42 L 5.5 -39 Z" fill="url(#rayShade3)" opacity="0.7"></path>
+      </g>
+      <use href="#rayB3" transform="rotate(30)"></use>
+      <use href="#rayB3" transform="rotate(60)"></use>
+      <use href="#rayB3" transform="rotate(90)"></use>
+      <use href="#rayB3" transform="rotate(120)"></use>
+      <use href="#rayB3" transform="rotate(150)"></use>
+      <use href="#rayB3" transform="rotate(180)"></use>
+      <use href="#rayB3" transform="rotate(210)"></use>
+      <use href="#rayB3" transform="rotate(240)"></use>
+      <use href="#rayB3" transform="rotate(270)"></use>
+      <use href="#rayB3" transform="rotate(300)"></use>
+      <use href="#rayB3" transform="rotate(330)"></use>
+    </g>
+    <circle cx="0" cy="0" r="42" fill="#5A2E00"></circle>
+    <circle cx="0" cy="0" r="40" fill="url(#sphereCore3)"></circle>
+    <circle cx="0" cy="0" r="40" fill="url(#sphereShade3)"></circle>
+    <circle cx="0" cy="0" r="40" fill="url(#sphereSpec3)"></circle>
+  </g>
+
+  <text x="140" y="58" font-family="Fraunces, Georgia, serif" font-weight="400" font-size="36" fill="#1F3319" letter-spacing="-0.6">Isaac Roth</text>
+  <text x="140" y="96" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="400" font-size="32" fill="#B65A30" letter-spacing="-0.5">Solar</text>
+  <text x="298" y="96" font-family="Outfit, system-ui, sans-serif" font-weight="600" font-size="11" fill="#6F665A" letter-spacing="3.2">EAST BAY · OAKLAND</text>
+</svg>
