@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    
+    <radialGradient id="sphereCore" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#FFF8E0"></stop>
+      <stop offset="18%" stop-color="#FFE066"></stop>
+      <stop offset="48%" stop-color="#FFB927"></stop>
+      <stop offset="78%" stop-color="#D17C04"></stop>
+      <stop offset="100%" stop-color="#7A4500"></stop>
+    </radialGradient>
+
+    
+    <radialGradient id="sphereShade" cx="65%" cy="72%" r="55%">
+      <stop offset="0%" stop-color="#7A4500" stop-opacity="0.55"></stop>
+      <stop offset="100%" stop-color="#7A4500" stop-opacity="0"></stop>
+    </radialGradient>
+
+    
+    <radialGradient id="sphereSpec" cx="36%" cy="28%" r="22%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"></stop>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.18"></stop>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"></stop>
+    </radialGradient>
+
+    
+    <linearGradient id="rayBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE066"></stop>
+      <stop offset="55%" stop-color="#FFB927"></stop>
+      <stop offset="100%" stop-color="#A85F02"></stop>
+    </linearGradient>
+    <linearGradient id="rayHilite" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"></stop>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.25"></stop>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="rayShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7A4500" stop-opacity="0"></stop>
+      <stop offset="55%" stop-color="#7A4500" stop-opacity="0.30"></stop>
+      <stop offset="100%" stop-color="#7A4500" stop-opacity="0.85"></stop>
+    </linearGradient>
+
+    
+    <radialGradient id="floor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1F3319" stop-opacity="0.45"></stop>
+      <stop offset="100%" stop-color="#1F3319" stop-opacity="0"></stop>
+    </radialGradient>
+
+    
+    <radialGradient id="ring" cx="50%" cy="50%" r="50%">
+      <stop offset="84%" stop-color="#3E6233" stop-opacity="0"></stop>
+      <stop offset="92%" stop-color="#3E6233" stop-opacity="0.10"></stop>
+      <stop offset="100%" stop-color="#3E6233" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+
+  
+  <ellipse cx="100" cy="178" rx="58" ry="9" fill="url(#floor)"></ellipse>
+
+  
+  <g transform="translate(100 100)">
+    
+    <g id="ray3d">
+      
+      <path d="M -10 -50 Q 0 -78 10 -50 L 6 -38 L -6 -38 Z" fill="#5A2E00"></path>
+      
+      <path d="M -8.5 -49 Q 0 -74 8.5 -49 L 5.5 -39 L -5.5 -39 Z" fill="url(#rayBody)"></path>
+      
+      <path d="M -8.5 -49 Q -4 -68 0 -74 L 0 -42 L -5.5 -39 Z" fill="url(#rayHilite)" opacity="0.85"></path>
+      
+      <path d="M 8.5 -49 Q 4 -68 0 -74 L 0 -42 L 5.5 -39 Z" fill="url(#rayShade)" opacity="0.7"></path>
+    </g>
+    <use href="#ray3d" transform="rotate(30)"></use>
+    <use href="#ray3d" transform="rotate(60)"></use>
+    <use href="#ray3d" transform="rotate(90)"></use>
+    <use href="#ray3d" transform="rotate(120)"></use>
+    <use href="#ray3d" transform="rotate(150)"></use>
+    <use href="#ray3d" transform="rotate(180)"></use>
+    <use href="#ray3d" transform="rotate(210)"></use>
+    <use href="#ray3d" transform="rotate(240)"></use>
+    <use href="#ray3d" transform="rotate(270)"></use>
+    <use href="#ray3d" transform="rotate(300)"></use>
+    <use href="#ray3d" transform="rotate(330)"></use>
+  </g>
+
+  
+  
+  <circle cx="100" cy="100" r="42" fill="#5A2E00"></circle>
+  
+  <circle cx="100" cy="100" r="40" fill="url(#sphereCore)"></circle>
+  
+  <circle cx="100" cy="100" r="40" fill="url(#sphereShade)"></circle>
+  
+  <circle cx="100" cy="100" r="40" fill="url(#sphereSpec)"></circle>
+
+  
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#FFB927" stroke-width="2" stroke-opacity="0.10"></circle>
+  <circle cx="100" cy="100" r="64" fill="none" stroke="#FFB927" stroke-width="2" stroke-opacity="0.16"></circle>
+</svg>
